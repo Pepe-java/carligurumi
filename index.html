@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Carligurumi</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!--  Site header -->
+    <header>
+      <div id="header" class="persistent-bar">
+        <div class="logo-wrapper">
+          <img src="./assets/logo.jpeg" alt="Logo" class="logo-image" />
+        </div>
+        <h1 class="site-title">Carligurumi  🧶</h1>
+        <!-- Top bar -->
+        <div id="bar-container">
+          <nav id="top-menu" aria-label="Top navigation">
+            <button id="home-screen-btn" class="menu-btn">🏠 Inicio</button>
+            <button id="trash-screen-btn" class="menu-btn">🗑️ Basura</button>
+            <button id="settings-btn" class="menu-btn">⚙️ Ajustes</button>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <!-- Main screens -->
+    <main class="screen-container" role="main">
+      <!-- Home screen -->
+      <div id="home-screen" class="screen screen-home">
+        <div id="tag-filter-bar"></div>
+        <div id="photo-entries"></div>
+        <button id="add-photo-btn">+</button>
+      </div>
+      <!-- Add photo form -->
+      <div id="add-photo-screen" class="screen screen-add-photo">
+        <h2>🧶 Agregar Amigurumi</h2>
+        <form id="add-photo-form" class="form">
+          <input type="text" id="new-photo-title" placeholder="Title" />
+          <textarea id="new-photo-content" placeholder="Descripción"></textarea>
+          <input
+            type="text"
+            id="new-photo-tags"
+            placeholder="Etiquetas (separadas por una coma)"
+          />
+          <input
+            type="url"
+            id="new-photo-url"
+            placeholder="Link de Instagram"
+          />
+          <button type="submit" id="add-new-note">Agregar</button>
+          <button type="button" id="cancel-photo-btn">✖️ Cerrar</button>
+        </form>
+      </div>
+      <!-- Trash screen -->
+      <div id="trash-screen" class="screen screen-trash">
+        <div id="deleted-photos"></div>
+      </div>
+      <!-- Settings screen -->
+      <div id="settings-screen" class="screen screen-settings">
+        <div id="settings-header">
+          <h2>⚙️ Ajustes</h2>
+        </div>
+        <div id="settings-menu">
+          <button id="theme-btn" class="option-btn">🎨 Cambiar Fondo</button>
+          <button id="clear-trash" class="option-btn">🧹 Limpiar Basura</button>
+          <button id="reset-data-btn" class="option-btn">
+            🚫 Borrar Todos Los Datos
+          </button>
+          <label for="sort-photos-by">⚙️ Ordenar por</label>
+          <select id="sort-photos-by">
+            <option value="newest">Los mas nuevos</option>
+            <option value="oldest">Los mas antiguos</option>
+          </select>
+          <label for="disable-animations-toggle">
+            <input type="checkbox" id="disable-animations-toggle" />✨
+            Desactivar Animaciones
+          </label>
+        </div>
+      </div>
+      <!-- Change theme popup -->
+      <div id="change-theme-popup" class="popup hidden">
+        <div id="change-theme-header">
+          <h2>🎨 Cambiar Fondo</h2>
+        </div>
+        <div id="change-theme-content">
+          <button id="theme-light" class="theme-btn">Light</button>
+          <button id="theme-dark" class="theme-btn">Dark</button>
+          <button id="theme-sunset" class="theme-btn">Sunset</button>
+          <button id="close-theme-popup" class="option-btn">✖️ Cerrar</button>
+        </div>
+      </div>
+    </main>
+    <!-- Footer -->
+    <footer id="site-footer">
+      <div id="footer" class="persistent-bar">
+        <div id="logo-wrapper">
+          <img src="./assets/logo.jpeg" alt="Logo" class="logo-image" />
+        </div>
+        <p>Te amo princesa ❤️</p>
+      </div>
+    </footer>
+    <!-- No script -->
+    <noscript id="no-js-warning">
+      <div role="alert">
+        This app requires JavaScript to function. Please enable JavaScript in
+        your browser.
+      </div>
+    </noscript>
+    <script src="script.js"></script>
+  </body>
+</html>
